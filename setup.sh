@@ -161,8 +161,7 @@ done
 echo "Starting brew app install..."
 
 ### Window Management
-# Todo: Try Divvy and spectacles in the future
-brew cask install sizeup  # window manager
+brew cask install spectacle  # window manager
 
 # Start SizeUp at login
 defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
