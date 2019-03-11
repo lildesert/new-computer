@@ -176,10 +176,8 @@ brew cask install iterm2
 
 ### Development
 brew cask install docker
-brew install postgresql
-brew install redis
-brew install nvm
 brew cask install sourcetree
+brew install nvm
 nvm install node
 
 
@@ -194,12 +192,11 @@ brew install grep --with-default-names
 brew install trash  # move to osx trash instead of rm
 
 
-### Dev Editors 
+### Dev Editors
 brew cask install visual-studio-code
 
 
 ### Productivity
-brew cask install timing  # time and project tracker
 brew cask install the-unarchiver
 brew cask install caffeine  # keep computer from sleeping
 brew cask install skitch  # app to annotate screenshots
