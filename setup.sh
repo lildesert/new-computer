@@ -163,11 +163,11 @@ echo "Starting brew app install..."
 ### Window Management
 brew cask install spectacle  # window manager
 
-# Start SizeUp at login
-defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
-
 # Don’t show the preferences window on next start
 defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
+
+# Create .bash_profile
+touch ~/.bash_profile
 
 
 ### Developer Tools
@@ -180,6 +180,7 @@ brew install postgresql
 brew install redis
 brew install nvm
 brew cask install sourcetree
+nvm install node
 
 
 ### Command line tools - install new ones, update others to latest version
