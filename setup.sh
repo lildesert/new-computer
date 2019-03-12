@@ -176,6 +176,7 @@ brew cask install iterm2
 
 ### Development
 brew cask install docker
+brew cask install kitematic
 brew cask install sourcetree
 brew install nvm
 nvm install node
