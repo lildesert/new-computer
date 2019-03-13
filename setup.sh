@@ -178,6 +178,7 @@ brew cask install iterm2
 brew cask install docker
 brew cask install kitematic
 brew cask install sourcetree
+brew cask install diffmerge
 brew install nvm
 nvm install node
 
