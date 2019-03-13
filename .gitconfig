@@ -41,24 +41,24 @@
   excludesfile = /Users/julien.bistoquet/.gitignore_global
 
 [user]
-	name = lildesert
-	email = julien.bistoquet@gmail.com
+  name = lildesert
+  email = julien.bistoquet@gmail.com
 
 [diff]
-	tool = diffmerge
+  tool = diffmerge
 
 [difftool "diffmerge"]
-	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+  cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
 
 [merge]
-	tool = diffmerge
+  tool = diffmerge
 
 [mergetool "diffmerge"]
-	trustExitCode = true
-	cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+  trustExitCode = true
+  cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 
 [mergetool]
-	keepBackup = false
+  keepBackup = false
 
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
