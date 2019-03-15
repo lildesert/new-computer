@@ -172,6 +172,7 @@ touch ~/.bash_profile
 
 ### Developer Tools
 brew cask install iterm2
+brew cask install dbeaver-community
 
 
 ### Development
