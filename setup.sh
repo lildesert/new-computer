@@ -176,6 +176,7 @@ brew cask install dbeaver-community
 
 
 ### Development
+brew cask install java
 brew cask install docker
 brew cask install kitematic
 brew cask install sourcetree
