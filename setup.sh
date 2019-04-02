@@ -200,6 +200,9 @@ brew install trash  # move to osx trash instead of rm
 brew cask install visual-studio-code
 
 
+### VM
+brew cask install virtualbox
+
 ### Productivity
 brew cask install the-unarchiver
 brew cask install caffeine  # keep computer from sleeping
