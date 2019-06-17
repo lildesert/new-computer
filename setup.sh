@@ -210,6 +210,7 @@ brew cask install skitch  # app to annotate screenshots
 brew cask install muzzle
 brew cask install flux
 brew cask install flycut
+brew cask install alfred
 
 
 ### Chat / Video Conference
