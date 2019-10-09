@@ -184,7 +184,6 @@ brew cask install diffmerge
 brew install nvm
 nvm install node
 brew install fzf
-brew install the_silver_searcher
 
 
 ### Command line tools - install new ones, update others to latest version
