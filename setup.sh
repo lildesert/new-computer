@@ -184,6 +184,7 @@ brew cask install diffmerge
 brew install nvm
 nvm install node
 brew install fzf
+brew install yarn
 
 
 ### Command line tools - install new ones, update others to latest version
