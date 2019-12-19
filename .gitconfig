@@ -9,8 +9,9 @@
   ci = commit
   st = status
   br = branch
-  lg = log
+  lg = log --oneline --graph
   rb = rebase -i
+  pf = push --force-with-lease
   type = cat-file -t
   dump = cat-file -p
 
