@@ -9,7 +9,7 @@
   ci = commit
   st = status
   br = branch
-  lg = log --oneline --graph
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an> %Creset%C(yellow)%ci / %ai%Creset' --abbrev-commit
   rb = rebase -i
   pf = push --force-with-lease
   type = cat-file -t
