@@ -191,6 +191,7 @@ brew install yarn
 brew install git  # upgrade to latest
 brew install git-lfs # track large files in git https://github.com/git-lfs/git-lfs
 brew install git-recent
+brew install hub
 brew install wget
 brew install tree
 brew link curl --force
