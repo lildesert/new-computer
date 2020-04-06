@@ -100,75 +100,12 @@ Unchecked:
 
 * Sign into chrome to sync profile & bookmarks
 * Chrome -> Warn before quitting: ON
+* Extensions
+	* React dev tools -> https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
+	* Grammarly -> https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en
+	* Show Password -> https://chrome.google.com/webstore/detail/showpassword/bbiclfnbhommljbjcoelobnnnibemabl?hl=en
+	* Dark Reader -> https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en
 
 #### Alfred
 
-* Set Double Cmd to Alfred hotkey
-
 #### Configure VPN
-
-#### SizeUp
-
-* configure license
-* settings -> automatically start at login
-
-#### Karabiner Elements
-
-* Simple Modifications
-	* From key caps_lock to key left_control (Remap caps lock to control for emacs)
-	* From key right_control to key `b` (custom setting for my ergonomic keyboard)
-* Devices
-	* For all devices -> Caps Lock LED Check Manipulate LED
-
-#### Arduino IDE (Set up to use with Adafruit boards)
-
-* Preferences -> Additional Boards Manager URLS -> https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
-* Tools -> Board -> Board Manager. Install:
-	* Arduino SAMD Boards
-	* Adafruit AVR Boards
-* Sketch -> Include Library -> Manage Libraries. Install:
-	* Adafruit NeoPixel
-	* FastLED
-
-#### Dash
-
-* Download
-* docs for:
-	* python2
-	* python3
-	* django
-	* flask
-	* arduino
-	* processing
-	* man pages
-* cheatsheets for:
-	* emacs
-	* git
-	* python debugger
-	* python unittest assertions
-
-### Limechat
-
-* log into freenode
-
-### Widgets
-
-Useful [shipping status tracker widget](https://junecloud.com/software/dashboard/delivery-status.html)
-
-#### Optional
-
-Apps:
-
-* [Send to kindle for Mac](https://www.amazon.com/gp/sendtokindle/mac)
-* [Delivery Status Dashboard Widget](https://www.apple.com/downloads/dashboard/shopping/deliverystatus.html)
-* [Flip Clock Screensaver](https://fliqlo.com/#about)
-* [FlyCut Clipboard Manager](https://github.com/TermiT/Flycut)
-* Visit [this page](http://optout.aboutads.info/) to opt out of ads (turn off adblock first)
-
-#### Todos
-
-- Configure touchbar?
-	- See: https://blog.eriknicolasgomez.com/2016/11/28/managing-or-setting-the-mini-touchbar-control-strip/
-- Set up wallpaper
-	- osascript -e 'tell application "Finder" to set desktop picture to "/Users/wilsonmar/Pictures/wallpapers/macOS-High-Sierra-Wallpaper-2880x1494.jpg" as POSIX file'
-- Set up alfred powerpack
