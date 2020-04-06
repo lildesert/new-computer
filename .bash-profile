@@ -41,3 +41,6 @@ routes() {
 
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
 alias prettyjson='python -m json.tool'
+
+# Remove zsh message on OSX Catalina
+export BASH_SILENCE_DEPRECATION_WARNING=1
