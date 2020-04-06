@@ -2,16 +2,6 @@
 
 My personal installation script for a new computer.
 
-Note, this sets up an extremely opinionated and highly personalized installation, with my preferences and dotfiles. Please adjust as needed!
-
-My dotfile repo is currently private, but I plan on creating a public repo before the end of the year.
-
-Some resources borrowed from:
-
-- https://github.com/ruyadorno/installme-osx/
-- https://gist.github.com/millermedeiros/6615994
-- https://gist.github.com/brandonb927/3195465/
-
 ## Install from script:
 
 Open the terminal, then:
@@ -46,7 +36,7 @@ Unchecked:
 #### Iterm2
 
 * Iterm2 -> Preferences -> General
-	* Check: Load preferences from custom folder /Users/nina/dotfiles/iterm-profiles
+	* Check: Load preferences from custom folder
 	* Check: Save changes to folder when Iterm2 quits
 
 #### System Preferences Configuration
