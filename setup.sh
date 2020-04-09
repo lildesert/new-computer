@@ -9,13 +9,7 @@
 
 echo "I  ❤️  🍎"
 echo "Mac OS Install Setup Script"
-echo "By Nina Zakharenko"
-echo "Follow me on twitter! https://twitter.com/nnja"
-
-# Some configs reused from:
-# https://github.com/ruyadorno/installme-osx/
-# https://gist.github.com/millermedeiros/6615994
-# https://gist.github.com/brandonb927/3195465/
+echo "By Julien Bistoquet"
 
 # Colorize
 
@@ -166,9 +160,6 @@ brew cask install spectacle  # window manager
 # Don’t show the preferences window on next start
 defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 
-# Download .bash_profile
-curl -o ~/.bash_profile 'https://raw.githubusercontent.com/lildesert/new-computer/master/dotfiles/.bash_profile'
-
 # Download .gitconfig
 curl -o ~/.gitconfig 'https://raw.githubusercontent.com/lildesert/new-computer/master/dotfiles/.gitconfig'
 
@@ -199,6 +190,32 @@ brew install tree
 brew link curl --force
 brew install grep --with-default-names
 brew install trash  # move to osx trash instead of rm
+brew install lnav  # log files navigation
+
+
+### zsh
+brew install zsh
+chsh -s /usr/local/bin/zsh
+
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+upgrade_oh_my_zsh
+
+# zsh-docker plugin
+git clone https://github.com/zsh-users/zsh-docker.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-docker
+
+# powerline fonts
+git clone https://github.com/powerline/fonts.git --depth=1
+./fonts/install.sh
+rm -rf fonts
+
+# powerlevel9k theme
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+brew install zsh-syntax-highlighting
+
+# Download .zshrc
+curl -o ~/.zshrc 'https://raw.githubusercontent.com/lildesert/new-computer/master/dotfiles/.zshrc'
 
 
 ### Dev Editors
