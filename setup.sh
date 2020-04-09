@@ -166,8 +166,11 @@ brew cask install spectacle  # window manager
 # Don’t show the preferences window on next start
 defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 
-# Create .bash_profile
-touch ~/.bash_profile
+# Download .bash_profile
+curl -o ~/.bash_profile 'https://raw.githubusercontent.com/lildesert/new-computer/master/.bash_profile'
+
+# Download .gitconfig
+curl -o ~/.gitconfig 'https://raw.githubusercontent.com/lildesert/new-computer/master/.gitconfig'
 
 
 ### Developer Tools
@@ -192,7 +195,6 @@ brew install git  # upgrade to latest
 brew install git-lfs # track large files in git https://github.com/git-lfs/git-lfs
 brew install git-recent
 brew install hub
-brew install wget
 brew install tree
 brew link curl --force
 brew install grep --with-default-names
