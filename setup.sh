@@ -167,10 +167,10 @@ brew cask install spectacle  # window manager
 defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 
 # Download .bash_profile
-curl -o ~/.bash_profile 'https://raw.githubusercontent.com/lildesert/new-computer/master/.bash_profile'
+curl -o ~/.bash_profile 'https://raw.githubusercontent.com/lildesert/new-computer/master/dotfiles/.bash_profile'
 
 # Download .gitconfig
-curl -o ~/.gitconfig 'https://raw.githubusercontent.com/lildesert/new-computer/master/.gitconfig'
+curl -o ~/.gitconfig 'https://raw.githubusercontent.com/lildesert/new-computer/master/dotfiles/.gitconfig'
 
 
 ### Developer Tools
