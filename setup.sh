@@ -196,6 +196,7 @@ brew install lnav  # log files navigation
 ### zsh
 brew install zsh
 chsh -s /usr/local/bin/zsh
+# sudo echo /usr/local/bin/zsh >> /etc/shells
 
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

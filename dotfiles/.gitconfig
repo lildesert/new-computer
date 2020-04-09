@@ -40,7 +40,7 @@
 
 [core]
   editor = nano
-  excludesfile = /Users/julien.bistoquet/.gitignore_global
+  excludesfile = /Users/julien/.gitignore_global
 
 [user]
   name = lildesert
