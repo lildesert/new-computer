@@ -82,6 +82,7 @@ fi
 # Latest brew, install brew cask
 brew upgrade
 brew update
+brew tap homebrew/cask-cask
 
 
 #############################################
@@ -117,7 +118,7 @@ else
 			AddKeysToAgent yes
 			UseKeychain yes
 			IdentityFile ~/.ssh/id_rsa
-	EOT
+EOT
 	fi
 
 	#############################################
