@@ -82,7 +82,7 @@ fi
 # Latest brew, install brew cask
 brew upgrade
 brew update
-brew tap caskroom/cask
+brew tap homebrew/cask-cask
 
 
 #############################################
@@ -90,63 +90,68 @@ brew tap caskroom/cask
 ### See: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 #############################################
 
-echo "Generating ssh keys, adding to ssh-agent..."
-read -p 'Input email for ssh key: ' useremail
-
-echo "Use default ssh file location, enter a passphrase: "
-ssh-keygen -t rsa -b 4096 -C "$useremail"  # will prompt for password
-eval "$(ssh-agent -s)"
-
-# Now that sshconfig is synced add key to ssh-agent and
-# store passphrase in keychain
-ssh-add -K ~/.ssh/id_rsa
-
-# If you're using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.
-
-if [ -e ~/.ssh/config ]
+if [ -e ~/.ssh/id_rsa ]
 then
-    echo "ssh config already exists. Skipping adding osx specific settings... "
+    echo "ssh key already exists. Skipping generating new ssh key... "
 else
-	echo "Writing osx specific settings to ssh config... "
-   cat <<EOT >> ~/.ssh/config
-	Host *
-		AddKeysToAgent yes
-		UseKeychain yes
-		IdentityFile ~/.ssh/id_rsa
-EOT
+    echo "Generating ssh keys, adding to ssh-agent..."
+    read -p 'Input email for ssh key: ' useremail
+
+    echo "Use default ssh file location, enter a passphrase: "
+    ssh-keygen -t rsa -b 4096 -C "$useremail"  # will prompt for password
+	eval "$(ssh-agent -s)"
+
+	# Now that sshconfig is synced add key to ssh-agent and
+	# store passphrase in keychain
+	ssh-add -K ~/.ssh/id_rsa
+
+	# If you're using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+
+
+	if [ -e ~/.ssh/config ]
+	then
+		echo "ssh config already exists. Skipping adding osx specific settings... "
+	else
+		echo "Writing osx specific settings to ssh config... "
+		cat <<EOT >> ~/.ssh/config
+		Host *
+			AddKeysToAgent yes
+			UseKeychain yes
+			IdentityFile ~/.ssh/id_rsa
+	EOT
+	fi
+
+	#############################################
+	### Add ssh-key to GitHub via api
+	#############################################
+
+	echo "Adding ssh-key to GitHub (via api)..."
+	echo "Important! For this step, use a github personal token with the admin:public_key permission."
+	echo "If you don't have one, create it here: https://github.com/settings/tokens/new"
+
+	retries=3
+	SSH_KEY=`cat ~/.ssh/id_rsa.pub`
+
+	for ((i=0; i<retries; i++)); do
+		  read -p 'GitHub username: ' ghusername
+		  read -p 'Machine name: ' ghtitle
+		  read -sp 'GitHub personal token: ' ghtoken
+
+		  gh_status_code=$(curl -o /dev/null -s -w "%{http_code}\n" -u "$ghusername:$ghtoken" -d '{"title":"'$ghtitle'","key":"'"$SSH_KEY"'"}' 'https://api.github.com/user/keys')
+
+		  if (( $gh_status_code -eq == 201))
+		  then
+			  echo "GitHub ssh key added successfully!"
+			  break
+		  else
+				echo "Something went wrong. Enter your credentials and try again..."
+				echo -n "Status code returned: "
+				echo $gh_status_code
+		  fi
+	done
+
+	[[ $retries -eq i ]] && echo "Adding ssh-key to GitHub failed! Try again later."
 fi
-
-#############################################
-### Add ssh-key to GitHub via api
-#############################################
-
-echo "Adding ssh-key to GitHub (via api)..."
-echo "Important! For this step, use a github personal token with the admin:public_key permission."
-echo "If you don't have one, create it here: https://github.com/settings/tokens/new"
-
-retries=3
-SSH_KEY=`cat ~/.ssh/id_rsa.pub`
-
-for ((i=0; i<retries; i++)); do
-      read -p 'GitHub username: ' ghusername
-      read -p 'Machine name: ' ghtitle
-      read -sp 'GitHub personal token: ' ghtoken
-
-      gh_status_code=$(curl -o /dev/null -s -w "%{http_code}\n" -u "$ghusername:$ghtoken" -d '{"title":"'$ghtitle'","key":"'"$SSH_KEY"'"}' 'https://api.github.com/user/keys')
-
-      if (( $gh_status_code -eq == 201))
-      then
-          echo "GitHub ssh key added successfully!"
-          break
-      else
-			echo "Something went wrong. Enter your credentials and try again..."
-     		echo -n "Status code returned: "
-     		echo $gh_status_code
-      fi
-done
-
-[[ $retries -eq i ]] && echo "Adding ssh-key to GitHub failed! Try again later."
-
 
 ##############################
 # Install via Brew           #
@@ -234,6 +239,9 @@ brew cask install muzzle
 brew cask install flux
 brew cask install flycut
 brew cask install alfred
+
+### Security
+brew cask install authy
 
 
 ### Chat / Video Conference
