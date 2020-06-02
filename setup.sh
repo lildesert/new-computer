@@ -168,6 +168,9 @@ defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 # Download .gitconfig
 curl -o ~/.gitconfig 'https://raw.githubusercontent.com/lildesert/new-computer/master/dotfiles/.gitconfig'
 
+# Download .gitignore_global
+curl -o ~/.gitignore_global 'https://raw.githubusercontent.com/lildesert/new-computer/master/dotfiles/.gitignore_global'
+
 
 ### Developer Tools
 brew cask install iterm2
@@ -184,6 +187,7 @@ brew install nvm
 nvm install node
 brew install fzf
 brew install yarn
+brew install direnv
 
 
 ### Command line tools - install new ones, update others to latest version
