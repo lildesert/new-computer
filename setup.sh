@@ -82,7 +82,6 @@ fi
 # Latest brew, install brew cask
 brew upgrade
 brew update
-brew tap homebrew/cask-cask
 
 
 #############################################
