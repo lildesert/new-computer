@@ -19,20 +19,6 @@ These apps need to be configured manually.
 
 For OSX settings, I'm still looking for the command line way to change this preference.
 
-#### Set Scroll Reverser preferences
-
-##### Scrolling Section
-
-Checked:
-
-- Reverse Scrolling
-- Reverse vertical
-- Reverse horizontal
-- Reverse Mouse
-
-Unchecked:
-- Reverse Trackpad
-
 #### Iterm2
 
 * Iterm2 -> Preferences -> General
@@ -54,7 +40,9 @@ Unchecked:
 **Trackpad**
 
 * Tap to click: ON
-* Secondary click: ON
+* Secondary click: Click or tap with two fingers
+* Point & Click (MBP 2016)
+	* Silent clicking -> On
 
 **Display**
 
@@ -80,11 +68,6 @@ Unchecked:
 	* Show all filename extensions: ON
 	* Show warning before changing an extension: OFF
 	* Show warning before emptying the trash: OFF
-
-**TrackPad**
-
-* Point & Click
-	* Silent clicking -> On
 
 #### Chrome
 
