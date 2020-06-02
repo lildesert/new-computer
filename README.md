@@ -27,6 +27,14 @@ For OSX settings, I'm still looking for the command line way to change this pref
 
 #### System Preferences Configuration
 
+**Touch ID**
+
+**Control strip**
+
+* Touchbar shows: expanded control strip
+* Customize control strip
+
+
 **Users & Groups**
 
 * make sure guest account is turned off
@@ -57,6 +65,10 @@ For OSX settings, I'm still looking for the command line way to change this pref
 **Sharing**
 
 * Ensure everything is unchecked
+
+**Energy Saver**
+
+* Turn off display after: 10mn battery / 30mn power adapter
 
 **Finder Preferences**
 
