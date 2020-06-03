@@ -268,13 +268,16 @@ brew cleanup
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
+###############################################################################
+# General                                                        							#
+###############################################################################
+
+# Dark mode
+defaults write "Apple Global Domain" AppleInterfaceStyle -string "Dark"
 
 ##################
 ### Finder, Dock, & Menu Items
 ##################
-
-# Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
-defaults write com.apple.finder QuitMenuItem -bool true
 
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
@@ -311,11 +314,6 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-
-# Minimize windows into their application’s icon
-defaults write com.apple.dock minimize-to-application -bool true
-
-
 
 ###############################################################################
 # Screenshots / Screen                                                        #
@@ -354,6 +352,14 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # Disable force click and haptic feedback
 defaults write ~/Library/Preferences/com.apple.AppleMultitouchTrackpad.plist ForceSuppressed -bool true
 
+# Increase cursor speed
+defaults write NSGlobalDomain KeyRepeat -int 1
+
+# Reduce keyboard delay until repeat
+defaults write NSGlobalDomain InitialKeyRepeat -int 35
+
+# Secondary click with two fingers
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 0
 
 ###############################################################################
 # Mac App Store                                                               #
@@ -375,6 +381,12 @@ defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
+###############################################################################
+# Touchbar               																										  #
+###############################################################################
+
+# Keep control strip expanded
+defaults write com.apple.touchbar.agent PresentationModeGlobal -string "fullControlStrip"
 
 echo ""
 cecho "Done!" $cyan

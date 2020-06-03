@@ -62,6 +62,7 @@ export EDITOR='nano'
 # For a full list of active aliases, run `alias`.
 
 alias zshrc='code ~/.zshrc'
+alias gitignore='code ~/.gitignore_global'
 alias gitconfig='code ~/.gitconfig'
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
 alias dockerclean='docker kill $(docker ps -a -q); docker rm $(docker ps -a -q); docker rmi $(docker images -a -q)'

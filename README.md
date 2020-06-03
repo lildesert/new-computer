@@ -10,8 +10,7 @@ Open the terminal, then:
 bash -c "`curl -L https://raw.githubusercontent.com/lildesert/new-computer/master/setup.sh`"
 ```
 
-----
-
+---
 
 # Manual Configuration
 
@@ -21,9 +20,9 @@ For OSX settings, I'm still looking for the command line way to change this pref
 
 #### Iterm2
 
-* Iterm2 -> Preferences -> General
-	* Check: Load preferences from custom folder
-	* Check: Save changes to folder when Iterm2 quits
+- Iterm2 -> Preferences -> General
+  _ Check: Load preferences from custom folder
+  _ Check: Save changes to folder when Iterm2 quits
 
 #### System Preferences Configuration
 
@@ -31,65 +30,51 @@ For OSX settings, I'm still looking for the command line way to change this pref
 
 **Control strip**
 
-* Touchbar shows: expanded control strip
-* Customize control strip
-
+- Customize control strip
 
 **Users & Groups**
 
-* make sure guest account is turned off
+- make sure guest account is turned off
 
 **General**
 
-* Recent items: None
-* Appearance: Dark
-* Highlight color: Blue
+- Recent items: None
 
 **Trackpad**
 
-* Tap to click: ON
-* Secondary click: Click or tap with two fingers
-* Point & Click (MBP 2016)
-	* Silent clicking -> On
-
-**Display**
-
-* Night Shift (flux) -> Schedule -> Sunrise to Sunset
+- Point & Click (MBP 2016) \* Silent clicking -> On
 
 **Security & Privacy**
 
-* Firewall -> on
-* Firewall options -> Enable stealth mode
-* FileVault -> Turn On FileVault (encrypt harddrive)
+- Firewall -> on
+- Firewall options -> Enable stealth mode
+- FileVault -> Turn On FileVault (encrypt harddrive)
 
 **Sharing**
 
-* Ensure everything is unchecked
+- Ensure everything is unchecked
 
 **Energy Saver**
 
-* Turn off display after: 10mn battery / 30mn power adapter
+- Turn off display after: 10mn battery / 30mn power adapter
 
 **Finder Preferences**
 
-* General
-	* New finder window show: home folder
-* Sidebar
-	* Show home, remove Recents
-* Advanced
-	* Show all filename extensions: ON
-	* Show warning before changing an extension: OFF
-	* Show warning before emptying the trash: OFF
+- General \* New finder window show: home folder
+- Sidebar \* Show home, remove Recents
+- Advanced
+  _ Show all filename extensions: ON
+  _ Show warning before changing an extension: OFF \* Show warning before emptying the trash: OFF
 
 #### Chrome
 
-* Sign into chrome to sync profile & bookmarks
-* Chrome -> Warn before quitting: ON
-* Extensions
-	* React dev tools -> https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
-	* Grammarly -> https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en
-	* Show Password -> https://chrome.google.com/webstore/detail/showpassword/bbiclfnbhommljbjcoelobnnnibemabl?hl=en
-	* Dark Reader -> https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en
+- Sign into chrome to sync profile & bookmarks
+- Chrome -> Warn before quitting: ON
+- Extensions
+  _ React dev tools -> https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
+  _ Grammarly -> https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en
+  _ Show Password -> https://chrome.google.com/webstore/detail/showpassword/bbiclfnbhommljbjcoelobnnnibemabl?hl=en
+  _ Dark Reader -> https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en
 
 #### Alfred
 
