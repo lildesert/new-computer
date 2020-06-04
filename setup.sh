@@ -182,11 +182,25 @@ brew cask install docker
 brew cask install kitematic
 brew cask install sourcetree
 brew cask install diffmerge
-brew install nvm
-nvm install node
 brew install fzf
 brew install yarn
 brew install direnv
+
+##############################
+# Install NVM if not installed #
+##############################
+
+export NVM_DIR="${NVM_DIR:-"$HOME/.nvm"}"
+if ! [ -d "$NVM_DIR/.git" ]; then
+  unset NVM_DIR
+  curl https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh -o nvm_install.sh
+  echo "bb7e8f51023ab8b054c6578591fa0dc361ceeb08744e5cd1f0e551235c4912b2  nvm_install.sh" | shasum --check || exit 1
+  cat nvm_install.sh | bash
+  rm -f nvm_install.sh
+else
+  echo "nvm already installed";
+fi
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 
 ### Command line tools - install new ones, update others to latest version
