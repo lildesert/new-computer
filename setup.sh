@@ -261,6 +261,8 @@ brew cleanup
 
 #############################################
 ### Set OSX Preferences - Borrowed from https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+###
+### How to find preference labels: https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/
 #############################################
 
 # Close any open System Preferences panes, to prevent them from overriding
