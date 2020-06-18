@@ -267,6 +267,7 @@ brew cask install slack
 
 ### Music and Video
 brew cask install vlc
+brew cask install sonos-s1-controller
 
 
 ### Run Brew Cleanup
