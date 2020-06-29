@@ -185,6 +185,7 @@ brew cask install diffmerge
 brew install fzf
 brew install yarn
 brew install direnv
+brew cask install imageoptim
 
 ##############################
 # Install NVM if not installed #
