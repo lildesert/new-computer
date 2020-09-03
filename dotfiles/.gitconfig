@@ -39,7 +39,7 @@
   merge = refs/heads/master
 
 [core]
-  editor = nano
+  editor = code --wait
   excludesfile = ~/.gitignore_global
 
 [user]
@@ -47,25 +47,20 @@
   email = julien.bistoquet@gmail.com
 
 [diff]
-  tool = diffmerge
+  tool = vscode
 
 [difftool "diffmerge"]
   cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
 
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+
 [merge]
-  tool = diffmerge
+  tool = vscode
 
 [mergetool "diffmerge"]
   trustExitCode = true
   cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 
-[mergetool]
-  keepBackup = false
-
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path =
-
-[mergetool "sourcetree"]
-  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
