@@ -179,7 +179,6 @@ brew cask install dbeaver-community
 ### Development
 brew cask install java
 brew cask install docker
-brew cask install kitematic
 brew cask install sourcetree
 brew cask install diffmerge
 brew install fzf
@@ -253,7 +252,6 @@ brew cask install virtualbox
 brew cask install the-unarchiver
 brew cask install caffeine  # keep computer from sleeping
 brew cask install skitch  # app to annotate screenshots
-brew cask install muzzle
 brew cask install flux
 brew cask install flycut
 brew cask install alfred
