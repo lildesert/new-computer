@@ -107,3 +107,26 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+# rbenv
+eval "$(rbenv init -)";
+
+
+### Teads
+function regenProdRedshiftToken(){
+  token=$(teads-central redshift get-jdbc --cluster finance --group read-only)
+  echo $token
+  echo "db.finance-redshift.url=\"$token\"\ndb.finance-redshift.migration.placeholders.flywaySchema = \"flyway\"\ndb.finance-redshift.migration.placeholders.snapshotsSchema = \"snapshots\"\ndb.finance-redshift.migration.onStart = \"validate\"" > /Users/jbistoquet/dev/service-api-domains/domains/finance/finance-impl/src/main/resources/parameters.conf
+}
+function regenSandboxRedshiftToken(){
+  token=$(teads-central redshift get-jdbc --cluster sandbox --group read-write)
+  echo $token
+  echo "db.finance-redshift.url=\"$token\"" > /Users/jbistoquet/dev/service-api-domains/domains/finance/finance-impl/src/main/resources/parameters.conf
+}
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jbistoquet/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jbistoquet/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jbistoquet/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jbistoquet/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+alias crane='teads-central crane wrapper'
