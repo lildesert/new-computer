@@ -244,10 +244,6 @@ curl -o ~/.zshrc 'https://raw.githubusercontent.com/lildesert/new-computer/maste
 ### Dev Editors
 brew cask install visual-studio-code
 
-
-### VM
-brew cask install virtualbox
-
 ### Productivity
 brew cask install the-unarchiver
 brew cask install caffeine  # keep computer from sleeping
