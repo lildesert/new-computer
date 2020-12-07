@@ -49,18 +49,11 @@
 [diff]
   tool = vscode
 
-[difftool "diffmerge"]
-  cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
-
 [difftool "vscode"]
   cmd = code --wait --diff $LOCAL $REMOTE
 
 [merge]
   tool = vscode
-
-[mergetool "diffmerge"]
-  trustExitCode = true
-  cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 
 [mergetool "vscode"]
   cmd = code --wait $MERGED

@@ -180,8 +180,6 @@ brew cask install dbeaver-community
 brew install rbenv
 brew cask install java
 brew cask install docker
-brew cask install sourcetree
-brew cask install diffmerge
 brew install fzf
 brew install yarn
 brew install direnv
@@ -208,7 +206,6 @@ fi
 brew install git  # upgrade to latest
 brew install git-lfs # track large files in git https://github.com/git-lfs/git-lfs
 brew install git-recent
-brew install hub
 brew install tree
 brew link curl --force
 brew install grep --with-default-names
@@ -247,7 +244,6 @@ brew cask install visual-studio-code
 
 ### Productivity
 brew cask install the-unarchiver
-brew cask install caffeine  # keep computer from sleeping
 brew cask install skitch  # app to annotate screenshots
 brew cask install flux
 brew cask install flycut
