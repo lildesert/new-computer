@@ -184,6 +184,7 @@ brew install fzf
 brew install yarn
 brew install direnv
 brew cask install imageoptim
+brew install postman
 
 ##############################
 # Install NVM if not installed #
@@ -251,10 +252,12 @@ brew cask install alfred
 
 ### Security
 brew cask install authy
+brew install tunnelblick
 
 
 ### Chat / Video Conference
 brew cask install slack
+brew install zoom
 
 
 ### Music and Video
