@@ -183,7 +183,7 @@ brew install fzf
 brew install yarn
 brew install direnv
 brew install --cask imageoptim
-brew install postman
+
 
 ##############################
 # Install NVM if not installed #
