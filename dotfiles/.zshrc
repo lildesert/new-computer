@@ -56,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor
-export EDITOR='nano'
+export EDITOR='code'
 
 ### Aliases 
 # For a full list of active aliases, run `alias`.
