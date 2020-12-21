@@ -6,3 +6,4 @@ settings.json
 .bloop/
 project/metals.sbt
 .vscode
+.sdkmanrc

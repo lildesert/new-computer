@@ -79,7 +79,7 @@ then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
 fi
 
-# Latest brew, install brew cask
+# Latest brew
 brew upgrade
 brew update
 
@@ -159,7 +159,7 @@ fi
 echo "Starting brew app install..."
 
 ### Window Management
-brew cask install spectacle  # window manager
+brew install --cask spectacle  # window manager
 
 # Don’t show the preferences window on next start
 defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
@@ -172,18 +172,17 @@ curl -o ~/.gitignore_global 'https://raw.githubusercontent.com/lildesert/new-com
 
 
 ### Developer Tools
-brew cask install iterm2
-brew cask install dbeaver-community
+brew install --cask iterm2
+brew install --cask dbeaver-community
 
 
 ### Development
 brew install rbenv
-brew cask install java
-brew cask install docker
+brew install --cask docker
 brew install fzf
 brew install yarn
 brew install direnv
-brew cask install imageoptim
+brew install --cask imageoptim
 brew install postman
 
 ##############################
@@ -219,6 +218,11 @@ brew install zsh
 chsh -s /usr/local/bin/zsh
 # sudo echo /usr/local/bin/zsh >> /etc/shells
 
+# zsh compinit: insecure directories, run compaudit for list.
+# Ignore insecure directories and continue [y] or abort compinit [n]?
+sudo chmod -R 755 /usr/local/share/zsh
+sudo chown -R root:staff /usr/local/share/zsh
+
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 upgrade_oh_my_zsh
@@ -241,27 +245,28 @@ curl -o ~/.zshrc 'https://raw.githubusercontent.com/lildesert/new-computer/maste
 
 
 ### Dev Editors
-brew cask install visual-studio-code
+brew install --cask visual-studio-code
 
 ### Productivity
-brew cask install the-unarchiver
-brew cask install skitch  # app to annotate screenshots
-brew cask install flux
-brew cask install flycut
-brew cask install alfred
+brew install --cask the-unarchiver
+brew install --cask skitch  # app to annotate screenshots
+brew install --cask flux
+brew install --cask flycut
+brew install --cask alfred
+brew install --cask appcleaner
 
 ### Security
-brew cask install authy
+brew install --cask authy
 brew install tunnelblick
 
 
 ### Chat / Video Conference
-brew cask install slack
+brew install --cask slack
 brew install zoom
 
 
 ### Music and Video
-brew cask install vlc
+brew install --cask vlc
 
 
 ### Run Brew Cleanup
@@ -414,5 +419,5 @@ echo ""
 echo -n "Check for and install available OSX updates, install, and automatically restart? (y/n)? "
 read response
 if [ "$response" != "${response#[Yy]}" ] ;then
-    softwareupdate -i -a --restart
+    sudo softwareupdate -i -a --restart
 fi
