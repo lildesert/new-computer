@@ -180,7 +180,6 @@ brew install --cask dbeaver-community
 brew install rbenv
 brew install --cask docker
 brew install fzf
-brew install yarn
 brew install direnv
 brew install --cask imageoptim
 
