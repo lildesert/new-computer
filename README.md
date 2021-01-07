@@ -76,6 +76,10 @@ For OSX settings, I'm still looking for the command line way to change this pref
   _ Show Password -> https://chrome.google.com/webstore/detail/showpassword/bbiclfnbhommljbjcoelobnnnibemabl?hl=en
   _ Dark Reader -> https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en
 
+#### Docker
+
+- System Preferences / Security & Privacy / Privacy / Full Disk Access -> add Docker app
+
 #### Alfred
 
 #### Configure VPN
