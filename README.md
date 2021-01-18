@@ -80,6 +80,8 @@ For OSX settings, I'm still looking for the command line way to change this pref
 
 - System Preferences / Security & Privacy / Privacy / Full Disk Access -> add Docker app
 
-#### Alfred
+#### Flycut
+
+- Launch on login -> https://github.com/TermiT/Flycut/issues/206
 
 #### Configure VPN
