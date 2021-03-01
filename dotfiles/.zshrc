@@ -79,8 +79,6 @@ setopt    incappendhistory  #Immediately append to the history file, not just wh
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-eval "$(direnv hook zsh)"
-
 ### nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -108,15 +106,17 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
+
+eval "$(direnv hook zsh)"
+
 # rbenv
 eval "$(rbenv init -)";
-
 
 ### Teads
 function regenProdRedshiftToken(){
   token=$(teads-central redshift get-jdbc --cluster finance --group read-only)
   echo $token
-  echo "db.finance-redshift.url=\"$token\"\ndb.finance-redshift.migration.placeholders.flywaySchema = \"flyway\"\ndb.finance-redshift.migration.placeholders.snapshotsSchema = \"snapshots\"\ndb.finance-redshift.migration.onStart = \"validate\"" > /Users/jbistoquet/dev/service-api-domains/domains/finance/finance-impl/src/main/resources/parameters.conf
+  echo "db.finance-redshift.url=\"$token\"\ndb.finance-redshift.migration.placeholders.flywaySchema = \"flyway\"\ndb.finance-redshift.migration.placeholders.snapshotsSchema = \"snapshots\"\ndb.finance-redshift.migration.placeholders.datamartsSchema = \"datamarts\"\ndb.finance-redshift.migration.placeholders.salesforceSchema = \"salesforce\"\ndb.finance-redshift.migration.onStart = \"validate\"" > /Users/jbistoquet/dev/service-api-domains/domains/finance/finance-impl/src/main/resources/parameters.conf
 }
 function regenSandboxRedshiftToken(){
   token=$(teads-central redshift get-jdbc --cluster sandbox --group read-write)
@@ -130,3 +130,8 @@ if [ -f '/Users/jbistoquet/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/
 if [ -f '/Users/jbistoquet/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jbistoquet/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 alias crane='teads-central crane wrapper'
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/jbistoquet/.sdkman"
+[[ -s "/Users/jbistoquet/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jbistoquet/.sdkman/bin/sdkman-init.sh"
+
+export PATH="/usr/local/opt/libpq/bin:$PATH"
