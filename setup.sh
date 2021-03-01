@@ -211,38 +211,6 @@ brew install grep --with-default-names
 brew install trash  # move to osx trash instead of rm
 brew install lnav  # log files navigation
 
-
-### zsh
-brew install zsh
-chsh -s /usr/local/bin/zsh
-# sudo echo /usr/local/bin/zsh >> /etc/shells
-
-# zsh compinit: insecure directories, run compaudit for list.
-# Ignore insecure directories and continue [y] or abort compinit [n]?
-sudo chmod -R 755 /usr/local/share/zsh
-sudo chown -R root:staff /usr/local/share/zsh
-
-# oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-upgrade_oh_my_zsh
-
-# zsh-docker plugin
-git clone https://github.com/zsh-users/zsh-docker.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-docker
-
-# powerline fonts
-git clone https://github.com/powerline/fonts.git --depth=1
-./fonts/install.sh
-rm -rf fonts
-
-# powerlevel9k theme
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-
-brew install zsh-syntax-highlighting
-
-# Download .zshrc
-curl -o ~/.zshrc 'https://raw.githubusercontent.com/lildesert/new-computer/master/dotfiles/.zshrc'
-
-
 ### Dev Editors
 brew install --cask visual-studio-code
 
@@ -266,6 +234,36 @@ brew install zoom
 
 ### Music and Video
 brew install --cask vlc
+
+
+### zsh
+brew install zsh
+brew install zsh-syntax-highlighting
+chsh -s /usr/local/bin/zsh
+# sudo echo /usr/local/bin/zsh >> /etc/shells
+
+# zsh compinit: insecure directories, run compaudit for list.
+# Ignore insecure directories and continue [y] or abort compinit [n]?
+sudo chmod -R 755 /usr/local/share/zsh
+sudo chown -R root:staff /usr/local/share/zsh
+
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+upgrade_oh_my_zsh
+
+# zsh-docker plugin
+git clone https://github.com/zsh-users/zsh-docker.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-docker
+
+# powerline fonts
+git clone https://github.com/powerline/fonts.git --depth=1
+./fonts/install.sh
+rm -rf fonts
+
+# powerlevel9k theme
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+# Download .zshrc
+curl -o ~/.zshrc 'https://raw.githubusercontent.com/lildesert/new-computer/master/dotfiles/.zshrc'
 
 
 ### Run Brew Cleanup
