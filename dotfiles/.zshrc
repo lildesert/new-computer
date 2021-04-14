@@ -121,7 +121,7 @@ function regenProdRedshiftToken(){
 function regenSandboxRedshiftToken(){
   token=$(teads-central redshift get-jdbc --cluster sandbox --group read-write)
   echo $token
-  echo "db.finance-redshift.url=\"$token\"" > /Users/jbistoquet/dev/service-api-domains/domains/finance/finance-impl/src/main/resources/parameters.conf
+  echo "db.finance-redshift.url=\"$token\"\ndb.finance-redshift.copyCredentials=\"aws_access_key_id=KEY;aws_secret_access_key=SECRET\"" > /Users/jbistoquet/dev/service-api-domains/domains/finance/finance-impl/src/main/resources/parameters.conf
 }
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/jbistoquet/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jbistoquet/Downloads/google-cloud-sdk/path.zsh.inc'; fi
